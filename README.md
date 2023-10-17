@@ -180,7 +180,29 @@ if __name__ == "__main__":
 
 Utilice la siguiente plantilla de code para contar el tiempo:
 
-...
+Para empezar, vamos a utilizar la iteración de manera que, por ejemplo, al poner un valor de 10, el tiempo arrojado es de 0.002999, para valores más elevados como 100, el tiempo es de 0.071, lo cual ya es una diferencia de tiempo considerable comparando 10 con 100. Exactamente de 0.0681.
+
+```python
+def fibo(n : int )-> int:
+  i : int = 1
+  # caso base
+  n1 : int = 0
+  n2 : int = 1
+  while(i <= n):
+    # Condicion
+    sumFibo = n1 + n2
+    print(sumFibo)
+    # Actualizacion
+    n1 = n2
+    n2 = sumFibo
+    i += 1
+  return sumFibo
+
+if __name__ == "__main__":
+  num = int(input("Ingrese numero: "))
+  serieFibo = fibo(num)
+  print("La serie de Fibonacci hasta " + str(num) + " es " + str(serieFibo))
+```
 
 ### Punto 5
 
